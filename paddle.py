@@ -12,8 +12,9 @@ class Paddle(pygame.sprite.Sprite):
         
     def move_right(self, pixels, max_width):
         self.rect.x += pixels
-        if self.rect.x > max_width:
-            self.rect.x = max_width
+        #
+        if self.rect.x > max_width-self.rect.width:
+            self.rect.x = max_width-self.rect.width
     
     def move_left(self, pixels):
         self.rect.x -= pixels
